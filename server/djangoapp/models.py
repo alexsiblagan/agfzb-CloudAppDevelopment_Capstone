@@ -13,11 +13,9 @@ class CarMake(models.Model):
     name = models.CharField(null=False, max_length=30, default='car')
     description = models.CharField(max_length=500)
 
-    
     # Create a toString method for object string representation
-    def __str__(self):
-        return self.first_name + " description: " + self.description
-
+#    def __str__(self):
+#        return self.name + " description: " + self.description
 
 # <HINT> Create a Car Model model `class CarModel(models.Model):`:
 # - Many-To-One relationship to Car Make model (One Car Make has many Car Models, using ForeignKey field)
@@ -37,8 +35,8 @@ class CarModel(models.Model):
     model = models.ForeignKey(CarMake, null=True, on_delete=models.CASCADE)
 
     # Create a toString method for object string representation
-    def __str__(self):
-        return self.first_name + " description: " + self.description
+#    def __str__(self):
+#        return self.name + " description: " + self.Type
 
 # <HINT> Create a plain Python class `CarDealer` to hold dealer data
 class CarDealer(models.Model):
