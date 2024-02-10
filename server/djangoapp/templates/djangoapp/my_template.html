@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,29 @@
 </head>
 
     <body>
-        <p> My Template</p>
+
+    <!--Add a nav bar here -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="btn btn-link" href="../djangoapp/index">Home</a>
+                    </li>
+                    <li>
+                         <a class="btn btn-link" href="../djangoapp/about">About</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-link" href="../djangoapp/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Add a dealer table here -->
+        {% block body %}
+        {% endblock %}
 
     </body>
 
